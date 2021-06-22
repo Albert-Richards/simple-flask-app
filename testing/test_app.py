@@ -13,5 +13,5 @@ class TestViews(TestBase):
     def test_home_get(self):
         response = self.client.get(url_for('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertIn(os.getenv('mytext'), response.data)
+        self.assertIn(b'os.getenv('mytext')', response.data)
 
