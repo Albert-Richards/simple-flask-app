@@ -6,12 +6,6 @@ import os
 # Create the base class
 class TestBase(TestCase):
     def create_app(self):
-
-        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///",
-                SECRET_KEY='TEST_SECRET_KEY',    
-                DEBUG=True,
-                WTF_CSRF_ENABLED=False
-                )
         return app
 
 class TestViews(TestBase):
